@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pams Mart — Your Most Suited Supermarket</title>
+  <meta name="description" content="Pams Mart is your favorite cozy supermarket for Self-Care, Chocolates, Drinks, and Snacks.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+  
+  <!-- Google Fonts: VT323 & Press Start 2P for retro pixel headers, Fredoka & Quicksand for cute aesthetic, Inter for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Retro Window Title Bar -->
+  <header class="retro-window-bar" id="retro-bar">
+    <div class="retro-title-left">
+      <span class="retro-icon">🛍️</span>
+      <span class="retro-app-name">Pams Mart v1.0 — Your Most Suited Supermarket</span>
+    </div>
+    <div class="retro-controls" aria-label="Window controls">
+      <button class="retro-btn btn-min" id="btn-window-min" title="Minimize" aria-label="Minimize Window">_</button>
+      <button class="retro-btn btn-max" id="btn-window-max" title="Maximize" aria-label="Maximize Window">□</button>
+      <button class="retro-btn btn-close" id="btn-window-close" title="Close" aria-label="Close Window">✕</button>
+    </div>
+  </header>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-navbar" id="main-nav" aria-label="Main Navigation">
+    <div class="nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" id="brand-home-link" aria-label="Pams Mart Home">
+        <span class="brand-ribbon">🎀</span>
+        <div class="brand-text-group">
+          <span class="brand-pams">PAMS</span>
+          <span class="brand-mart">Mart</span>
+        </div>
+        <span class="brand-badge">EST. 2026</span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="nav-search-wrapper" role="search">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input 
+          type="text" 
+          id="global-search-input" 
+          class="nav-search-input" 
+          placeholder="Search items (e.g. Kit Kat, Banana Milk, Facewash)..." 
+          aria-label="Search Pams Mart products"
+          autocomplete="off"
+        >
+        <button id="clear-search-btn" class="clear-search-btn" title="Clear search" aria-label="Clear Search" style="display:none;">✕</button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="nav-links-group" id="nav-menu">
+        <a href="#home" class="nav-link active" data-nav="home" id="nav-link-home">Home</a>
+        <a href="#catalog" class="nav-link" data-nav="catalog" id="nav-link-catalog">Catalog</a>
+        <a href="#chocolate" class="nav-link" data-nav="chocolate" id="nav-link-chocolate">Chocolate</a>
+        <a href="#self-care" class="nav-link" data-nav="self-care" id="nav-link-self-care">Self-Care</a>
+        <a href="#drinks" class="nav-link" data-nav="drinks" id="nav-link-drinks">Drinks</a>
+        <a href="#snacks" class="nav-link" data-nav="snacks" id="nav-link-snacks">Snacks</a>
+      </div>
+
+      <!-- Cart Button -->
+      <button class="nav-cart-btn" id="open-cart-btn" aria-label="Open Shopping Cart">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span class="cart-label">Cart</span>
+        <span class="cart-badge" id="cart-item-count">0</span>
+      </button>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-toggle-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Main View Container -->
+  <main id="main-content" class="content-wrapper">
+
+    <!-- ==================== 1. HOME VIEW ==================== -->
+    <section id="view-home" class="page-view active-view" aria-labelledby="home-title">
+      <div class="home-gingham-hero">
+        <div class="hero-decorations">
+          <div class="ribbon-decor top-left">🎀</div>
+          <div class="star-decor top-right">⭐</div>
+          <div class="sparkle-decor bottom-left">✨</div>
+          <div class="star-decor bottom-right">💫</div>
+        </div>
+
+        <div class="hero-inner-frame">
+          <div class="hero-left-col">
+            <div class="hero-logo-stamp">
+              <span class="pams-badge-pill">PAMS</span>
+            </div>
+            
+            <h1 class="hero-title" id="home-title">
+              <span class="title-pams">PAMS</span>
+              <span class="title-smart">Mart</span>
+            </h1>
+
+            <p class="hero-subtitle" id="home-subtitle">
+              YOUR MOST SUITED SUPERMARKET
+            </p>
+
+            <div class="hero-actions">
+              <a href="#catalog" class="btn-learn-more" id="hero-learn-more-btn" aria-label="Learn more about our catalog">
+                LEARN MORE
+              </a>
+              <button class="btn-quick-shop" id="hero-explore-btn" aria-label="Explore all categories">
+                BROWSE AISLES 🛒
+              </button>
+            </div>
+
+            <!-- Mini Quick Search on Hero -->
+            <div class="hero-search-bar">
+              <span class="search-emoji">🔍</span>
+              <input type="text" id="hero-search-input" placeholder="What are you craving today?" aria-label="Search directly from hero">
+              <button id="hero-search-go" class="hero-search-btn" aria-label="Submit search">Search</button>
+            </div>
+          </div>
+
+          <div class="hero-right-col">
+            <div class="hero-image-card">
+              <img 
+                src="assets/images/pams_banner.jpg" 
+                alt="Pams Mart cute pastel shopping cart full of sweet groceries" 
+                class="hero-art-img"
+                id="hero-banner-image"
+                loading="eager"
+              >
+              <div class="hero-art-tag">
+                <span class="tag-heart">💖</span> Freshly Stocked Daily
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Featured Aisles Carousel / Grid -->
+        <div class="home-aisles-section">
+          <div class="section-badge-header">
+            <span class="badge-pill">EXPLORE STORE</span>
+            <h2 class="aisles-headline">Featured Mart Aisles</h2>
+          </div>
+
+          <div class="aisles-grid" id="home-aisles-grid">
+            <!-- Rendered dynamically via app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. CATALOG VIEW ==================== -->
+    <section id="view-catalog" class="page-view" aria-labelledby="catalog-headline" style="display:none;">
+      <div class="catalog-scalloped-container">
+        
+        <!-- Scalloped Header Banner matching Picture 1 -->
+        <div class="catalog-header-banner">
+          <div class="pill-texture-decor" aria-hidden="true"></div>
+          <div class="catalog-badge-box">
+            <h1 class="catalog-headline" id="catalog-headline">CATALOG</h1>
+          </div>
+          <p class="catalog-subhead">Select an aisle to inspect fresh goodies & skincare treats</p>
+        </div>
+
+        <!-- 2x2 Category Cards Grid matching Picture 1 -->
+        <div class="catalog-cards-grid" id="catalog-cards-grid">
+          
+          <!-- SELF-CARE -->
+          <div class="catalog-category-card card-self-care" id="catalog-card-self-care" role="button" tabindex="0" data-category="self-care" aria-label="View Self-Care Category">
+            <div class="card-ticket-border">
+              <div class="card-icon-preview">
+                <img src="assets/images/strawberry_facewash.jpg" alt="Self-Care category preview" class="cat-preview-thumb">
+              </div>
+              <h2 class="category-title pixel-font">SELF-CARE</h2>
+              <span class="category-meta">Facewash, Lip Balm, Sunscreen</span>
+              <button class="btn-enter-aisle" aria-label="Enter Self-Care Aisle">ENTER AISLE &rarr;</button>
+            </div>
+          </div>
+
+          <!-- CHOCOLATE -->
+          <div class="catalog-category-card card-chocolate" id="catalog-card-chocolate" role="button" tabindex="0" data-category="chocolate" aria-label="View Chocolate Category">
+            <div class="card-ticket-border">
+              <div class="card-icon-preview">
+                <img src="assets/images/kitkat.jpg" alt="Chocolate category preview" class="cat-preview-thumb">
+              </div>
+              <h2 class="category-title pixel-font">CHOCOLATE</h2>
+              <span class="category-meta">Kit Kat, Snickers, Dairy Milk</span>
+              <button class="btn-enter-aisle" aria-label="Enter Chocolate Aisle">ENTER AISLE &rarr;</button>
+            </div>
+          </div>
+
+          <!-- SNACKS -->
+          <div class="catalog-category-card card-snacks" id="catalog-card-snacks" role="button" tabindex="0" data-category="snacks" aria-label="View Snacks Category">
+            <div class="card-ticket-border">
+              <div class="card-icon-preview">
+                <img src="assets/images/potato_chips.jpg" alt="Snacks category preview" class="cat-preview-thumb">
+              </div>
+              <h2 class="category-title pixel-font">SNACKS</h2>
+              <span class="category-meta">Potato Chips, Nachos, Pringles</span>
+              <button class="btn-enter-aisle" aria-label="Enter Snacks Aisle">ENTER AISLE &rarr;</button>
+            </div>
+          </div>
+
+          <!-- DRINKS -->
+          <div class="catalog-category-card card-drinks" id="catalog-card-drinks" role="button" tabindex="0" data-category="drinks" aria-label="View Drinks Category">
+            <div class="card-ticket-border">
+              <div class="card-icon-preview">
+                <img src="assets/images/strawberry_milk.jpg" alt="Drinks category preview" class="cat-preview-thumb">
+              </div>
+              <h2 class="category-title pixel-font">DRINKS</h2>
+              <span class="category-meta">Strawberry Milk, Banana Milk, Coke</span>
+              <button class="btn-enter-aisle" aria-label="Enter Drinks Aisle">ENTER AISLE &rarr;</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Catalog Footer Floral Ribbon & Cart -->
+        <div class="catalog-footer-ribbon">
+          <div class="floral-cluster" aria-hidden="true">🌸 🌷 🌺 🌸</div>
+          <div class="catalog-cart-dock">
+            <button class="dock-cart-btn" id="catalog-dock-cart-btn" aria-label="View shopping cart from catalog">
+              <span class="dock-cart-icon">🛒</span>
+              <span class="dock-cart-text">View Basket</span>
+              <span class="dock-cart-counter" id="dock-cart-counter">0</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. CATEGORY VIEW (Dedicated Product Showcase) ==================== -->
+    <section id="view-category" class="page-view" aria-labelledby="active-category-title" style="display:none;">
+      <div class="category-page-container" id="category-page-wrapper">
+        
+        <!-- Category Top Bar / Breadcrumb -->
+        <div class="category-nav-bar">
+          <a href="#catalog" class="back-to-catalog-btn" id="btn-back-to-catalog" aria-label="Go back to catalog">
+            &larr; Back to Catalog
+          </a>
+          
+          <div class="category-header-tag" id="category-header-tag">
+            <h1 class="active-category-title pixel-font" id="active-category-title">CHOCOLATE</h1>
+          </div>
+
+          <div class="category-cart-status">
+            <button class="btn-small-cart" id="cat-small-cart-btn" aria-label="View shopping cart">
+              🛒 <span id="cat-cart-count">0 items</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Description Banner -->
+        <p class="category-tagline" id="category-tagline">
+          Finest confectionery & rich treats imported for your cravings.
+        </p>
+
+        <!-- Product Cards Stack matching the Mockup Sheets -->
+        <div class="products-showcase-list" id="products-showcase-list" role="list">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+        <!-- Bottom Window Cart Bar -->
+        <div class="category-bottom-bar">
+          <button class="btn-back-home" id="btn-cat-back-home">&larr; Return to Home</button>
+          <div class="category-dock-window-ctrl">
+            <button class="quick-checkout-trigger" id="cat-quick-checkout-btn">Proceed to Checkout 🛍️</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. SEARCH RESULTS VIEW ==================== -->
+    <section id="view-search" class="page-view" aria-labelledby="search-results-title" style="display:none;">
+      <div class="search-page-container">
+        <div class="search-results-header">
+          <h1 id="search-results-title" class="search-title">Search Results</h1>
+          <p id="search-query-feedback" class="search-feedback">Showing items matching "<span id="search-term-display"></span>"</p>
+        </div>
+
+        <div class="products-showcase-list" id="search-results-list" role="list">
+          <!-- Populated dynamically -->
+        </div>
+
+        <div id="search-empty-state" class="empty-state" style="display:none;">
+          <span class="empty-emoji">🔍</span>
+          <h3>No items found</h3>
+          <p>We couldn't find any items matching your search. Try searching for "Kit Kat", "Milk", or "Sunscreen".</p>
+          <button class="btn-learn-more" id="btn-search-reset-catalog">Browse Catalog</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== CART DRAWER / MODAL ==================== -->
+  <div class="cart-backdrop" id="cart-backdrop" aria-hidden="true" style="display:none;"></div>
+  
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer" aria-hidden="true">
+    <div class="cart-header">
+      <div class="cart-title-box">
+        <span class="cart-title-icon">🛒</span>
+        <h2 id="cart-title" class="cart-headline">Your Basket</h2>
+      </div>
+      <button class="cart-close-btn" id="close-cart-btn" aria-label="Close Shopping Cart">✕</button>
+    </div>
+
+    <!-- Cart Items Body -->
+    <div class="cart-body" id="cart-items-container">
+      <!-- Items dynamically injected here -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-summary-row">
+        <span class="summary-label">Items Subtotal:</span>
+        <span class="summary-val" id="cart-subtotal-price">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span class="summary-label">Delivery Fee:</span>
+        <span class="summary-val green-text">FREE</span>
+      </div>
+      <div class="cart-summary-row total-row">
+        <span class="summary-label">Total to Pay:</span>
+        <span class="summary-val" id="cart-total-price">₹0</span>
+      </div>
+
+      <div class="cart-action-buttons">
+        <button class="btn-checkout" id="cart-checkout-btn" disabled>
+          Proceed to Order 🚀
+        </button>
+        <button class="btn-clear-cart" id="clear-cart-btn">
+          Clear Basket
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== SIMPLE CHECKOUT MODAL ==================== -->
+  <div class="checkout-modal-backdrop" id="checkout-backdrop" style="display:none;">
+    <div class="checkout-modal-card" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+      <div class="checkout-modal-header">
+        <h2 id="checkout-modal-title" class="checkout-title">🛍️ Complete Your Order</h2>
+        <button class="checkout-modal-close" id="close-checkout-btn" aria-label="Close Checkout">✕</button>
+      </div>
+
+      <div class="checkout-modal-body">
+        <div class="checkout-order-summary" id="checkout-items-summary">
+          <!-- Summary of selected items -->
+        </div>
+
+        <form id="simple-checkout-form" class="checkout-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="cust-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="cust-name" class="form-input" placeholder="e.g. Maya Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cust-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="cust-phone" class="form-input" placeholder="e.g. 9876543210" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cust-address">Delivery Address <span class="required">*</span></label>
+            <textarea id="cust-address" class="form-input" rows="2" placeholder="Street, Apartment, City, Pincode" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Payment Method</label>
+            <div class="payment-options">
+              <label class="radio-label">
+                <input type="radio" name="payment-method" value="cod" checked>
+                <span>💵 Cash on Delivery</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="payment-method" value="upi">
+                <span>📱 UPI / QR on Arrival</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-place-order" id="btn-submit-order">
+            Confirm & Place Order (<span id="checkout-submit-total">₹0</span>)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ORDER SUCCESS MODAL ==================== -->
+  <div class="success-modal-backdrop" id="success-backdrop" style="display:none;">
+    <div class="success-modal-card" role="alertdialog" aria-labelledby="success-modal-title">
+      <div class="success-icon-badge">🎉</div>
+      <h2 id="success-modal-title" class="success-headline">Order Placed Successfully!</h2>
+      <p class="success-order-id" id="success-order-id">Order #PAM-84920</p>
+      <p class="success-message">
+        Thank you for shopping at <strong>Pams Mart</strong>! Your fresh supermarket goodies are being prepared with care and will be delivered shortly.
+      </p>
+      <div class="success-items-box" id="success-items-details"></div>
+      <button class="btn-continue-shopping" id="btn-success-close">
+        Continue Shopping 🛒
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="pams-mart-footer">
+    <div class="footer-container">
+      <div class="footer-col-brand">
+        <div class="footer-logo">
+          <span class="ribbon-emoji">🎀</span>
+          <span class="footer-title">Pams Mart</span>
+        </div>
+        <p class="footer-tagline">Your Most Suited Supermarket — Inspired by convenience, crafted with cozy aesthetics.</p>
+      </div>
+
+      <div class="footer-col-nav">
+        <h4>Store Aisles</h4>
+        <ul>
+          <li><a href="#chocolate">Chocolate Aisle</a></li>
+          <li><a href="#self-care">Self-Care & Beauty</a></li>
+          <li><a href="#drinks">Beverages & Drinks</a></li>
+          <li><a href="#snacks">Crunchy Snacks</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-info">
+        <h4>Customer Care</h4>
+        <p>📍 Pams Mart Flagship Store</p>
+        <p>⏰ Open Daily: 7:00 AM – 11:00 PM</p>
+        <p>⚡ Express Delivery in 15 Minutes</p>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>© 2026 Pams Mart Supermarket. All rights reserved. Built with love & Selenium test verified.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

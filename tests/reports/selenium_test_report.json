@@ -1,0 +1,233 @@
+{
+  "total": 45,
+  "passed": 45,
+  "failed": 0,
+  "pass_rate": "100.0%",
+  "results": [
+    {
+      "test": "Page Title Test",
+      "status": "PASS",
+      "details": "Title correctly is 'Pams Mart \u2014 Your Most Suited Supermarket'"
+    },
+    {
+      "test": "Hero Branding Verification",
+      "status": "PASS",
+      "details": "Found 'PAMS\nMart' with subtitle 'YOUR MOST SUITED SUPERMARKET'"
+    },
+    {
+      "test": "Broken Images Check (Home Page)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Console Errors Check (Home Page)",
+      "status": "PASS",
+      "details": "No severe browser console errors"
+    },
+    {
+      "test": "Learn More Navigation",
+      "status": "PASS",
+      "details": "Clicked 'LEARN MORE' and successfully navigated to Catalog view"
+    },
+    {
+      "test": "Broken Images Check (Catalog View)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Catalog 4-Categories Verification",
+      "status": "PASS",
+      "details": "All 4 categories present: ['self-care', 'chocolate', 'snacks', 'drinks']"
+    },
+    {
+      "test": "Category Title Test",
+      "status": "PASS",
+      "details": "Category title is CHOCOLATE"
+    },
+    {
+      "test": "Chocolate Products & Pricing Verification",
+      "status": "PASS",
+      "details": "Kit Kat=\u20b920, Snickers=\u20b945, Dairy Milk=\u20b940"
+    },
+    {
+      "test": "Broken Images Check (Chocolate Category View)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Self-Care Products & Pricing Verification",
+      "status": "PASS",
+      "details": "Facewash=\u20b9135, Lip Balm=\u20b9750, Sunscreen=\u20b9499"
+    },
+    {
+      "test": "Broken Images Check (Self-Care Category View)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Drinks Products & Pricing Verification",
+      "status": "PASS",
+      "details": "Strawberry Milk=\u20b950, Banana Milk=\u20b9140, Coca Cola=\u20b945"
+    },
+    {
+      "test": "Broken Images Check (Drinks Category View)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Snacks Products & Pricing Verification",
+      "status": "PASS",
+      "details": "Potato Chips=\u20b930, Nachos=\u20b950, Pringles=\u20b9110"
+    },
+    {
+      "test": "Broken Images Check (Snacks Category View)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Add to Cart - Badge Update",
+      "status": "PASS",
+      "details": "Cart badge incremented to 1"
+    },
+    {
+      "test": "In-Card Quantity Increase",
+      "status": "PASS",
+      "details": "Quantity successfully incremented to 2"
+    },
+    {
+      "test": "Cart Drawer Open",
+      "status": "PASS",
+      "details": "Cart drawer smoothly slid open"
+    },
+    {
+      "test": "Cart Calculation Test",
+      "status": "PASS",
+      "details": "Subtotal and Total correctly calculated as \u20b980"
+    },
+    {
+      "test": "Checkout Modal Trigger",
+      "status": "PASS",
+      "details": "Checkout modal opened with order summary"
+    },
+    {
+      "test": "Order Placement & Confirmation",
+      "status": "PASS",
+      "details": "Order confirmed successfully! Order #PAM-34970"
+    },
+    {
+      "test": "Post-Order Cart Reset",
+      "status": "PASS",
+      "details": "Cart count successfully reset to 0"
+    },
+    {
+      "test": "Search Live Activation",
+      "status": "PASS",
+      "details": "Search view triggered on typing 'Milk'"
+    },
+    {
+      "test": "Search Filtering Test",
+      "status": "PASS",
+      "details": "Search correctly returned Strawberry Milk and Banana Milk"
+    },
+    {
+      "test": "Horizontal Overflow Check (Desktop 1920x1080 - Home)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=1889px <= window.innerWidth=1904px"
+    },
+    {
+      "test": "Broken Images Check (Desktop 1920x1080 - Home)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Console Errors Check (Desktop 1920x1080 - Home)",
+      "status": "PASS",
+      "details": "No severe browser console errors"
+    },
+    {
+      "test": "Horizontal Overflow Check (Desktop 1920x1080 - Catalog)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=1889px <= window.innerWidth=1904px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Desktop 1920x1080 - Category)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=1889px <= window.innerWidth=1904px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Laptop 1280x800 - Home)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=1249px <= window.innerWidth=1264px"
+    },
+    {
+      "test": "Broken Images Check (Laptop 1280x800 - Home)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Console Errors Check (Laptop 1280x800 - Home)",
+      "status": "PASS",
+      "details": "No severe browser console errors"
+    },
+    {
+      "test": "Horizontal Overflow Check (Laptop 1280x800 - Catalog)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=1249px <= window.innerWidth=1264px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Laptop 1280x800 - Category)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=1249px <= window.innerWidth=1264px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Tablet 768x1024 - Home)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=737px <= window.innerWidth=752px"
+    },
+    {
+      "test": "Broken Images Check (Tablet 768x1024 - Home)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Console Errors Check (Tablet 768x1024 - Home)",
+      "status": "PASS",
+      "details": "No severe browser console errors"
+    },
+    {
+      "test": "Horizontal Overflow Check (Tablet 768x1024 - Catalog)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=745px <= window.innerWidth=752px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Tablet 768x1024 - Category)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=737px <= window.innerWidth=752px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Mobile 375x667 - Home)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=485px <= window.innerWidth=500px"
+    },
+    {
+      "test": "Broken Images Check (Mobile 375x667 - Home)",
+      "status": "PASS",
+      "details": "All images loaded with valid natural dimensions"
+    },
+    {
+      "test": "Console Errors Check (Mobile 375x667 - Home)",
+      "status": "PASS",
+      "details": "No severe browser console errors"
+    },
+    {
+      "test": "Horizontal Overflow Check (Mobile 375x667 - Catalog)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=493px <= window.innerWidth=500px"
+    },
+    {
+      "test": "Horizontal Overflow Check (Mobile 375x667 - Category)",
+      "status": "PASS",
+      "details": "No overflow. scrollWidth=485px <= window.innerWidth=500px"
+    }
+  ]
+}
